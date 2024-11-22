@@ -1,0 +1,59 @@
+Case Study: Optimizing Text Messaging App with Efficient Data Structures
+Objective: The objective of this case study is to enhance the performance and responsiveness of a text messaging application by strategically selecting and implementing appropriate data structures for message storage, retrieval, and real-time updates.
+
+
+
+Problem Statement: The existing text messaging app experiences slowdowns and inefficiencies as the number of messages grows. The challenge is to identify and implement suitable data structures to manage conversations, support quick message retrieval, and facilitate real-time updates, ensuring a seamless user experience.
+
+
+
+Task 1: Message Storage and Retrieval:
+
+Research and analyze data structures for efficient message storage and retrieval.
+Consider factors such as message ordering, search complexity, and storage overhead.
+Evaluate data structures like arrays, linked lists, hash tables, and trees for storing and retrieving messages.
+Task 2: Real-Time Updates:
+
+Explore data structures suitable for real-time updates, ensuring that new messages are promptly delivered to users.
+Investigate techniques such as polling, long-polling, and websockets for real-time communication.
+Analyze the pros and cons of each approach in terms of scalability, latency, and resource consumption.
+Task 3: Conversation List Management:
+
+Evaluate data structures for managing the list of conversations, optimizing the display and retrieval of active conversations.
+Consider data structures like arrays, linked lists, hash tables, and trees for storing and accessing conversation metadata.
+Discuss strategies for sorting, filtering, and indexing conversations to improve user experience.
+Expected Outcomes:
+
+Detailed analysis of various data structures for message storage, retrieval, and real-time updates.
+A clear understanding of the advantages and disadvantages of different approaches.
+Recommendations for implementing efficient data structures based on the specific requirements of the text messaging app.
+Improved overall app performance, especially in scenarios with a high volume of messages or active conversations.
+Note to Students:
+
+In this case study, you are not required to implement code solutions. Instead, focus on presenting a thorough analysis of different data structures and their suitability for optimizing the performance of the text messaging app. Provide insights into how each data structure addresses specific challenges and contributes to improving user experience.
+
+Case Study: Analyzing Big O Complexity for a Sorting Algorithm
+Objective: The objective of this case study is to analyze the Big O complexity of a given sorting algorithm and understand its efficiency concerning different input sizes.
+
+Problem Statement: Consider a sorting algorithm that arranges an array of integers in ascending order. The challenge is to analyze the Big O complexity of the algorithm and assess its efficiency in various scenarios.
+
+def simple_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+Task 1: Identifying Key Operations
+
+Analyze the provided algorithm and identify the key operations it performs.
+Task 2: Calculating Big O Complexity
+
+Apply the principles of Big O notation to express how the algorithm's runtime grows concerning the size of the input
+Task 3: Efficiency Analysis:
+
+Propose potential improvements or alternative algorithms that might offer better performance
+Expected Outcome:
+
+A detailed list of key operations within the algorithm, providing insights into the fundamental steps it takes to accomplish its task.
+A clear expression of the Big O complexity, providing a concise understanding of how the algorithm's performance scales with input size.
+A concise analysis highlighting the efficiency aspects of the algorithm, along with constructive suggestions for improvement or alternative approaches.

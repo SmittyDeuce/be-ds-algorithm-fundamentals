@@ -1,0 +1,159 @@
+                    Problem Statement
+
+The existing text messaging app experiences slowdowns and
+inefficiencies as the number of messages grows. The challenge
+is to identify and implement suitable data structures to manage
+conversations, support quick message retrieval, and facilitate
+real-time updates, ensuring a seamless user experience
+
+
+Task 1: Message Storage and Retrieval:
+
+Research and analyze data structures for efficient message storage and retrieval.
+Consider factors such as message ordering, search complexity, and storage overhead.
+Evaluate data structures like arrays, linked lists, hash tables, and
+trees for storing and retrieving messages.
+
+Array
+    Advantages:
+        Simple and efficient for sequential access.
+        Low memory overhead.
+
+    Disadvantages:
+        Insertion and deletion are expensive (O(n)).
+        Fixed size (if using a static array).
+        Suitability: Best for small, static datasets.
+
+
+Linked List
+    Advantages:
+        Efficient insertions and deletions (O(1) if position is known).
+
+    Disadvantages:
+        Sequential traversal (O(n) for retrieval).
+        Higher memory usage due to pointers.
+        Suitability: Useful for dynamic storage but inefficient for large-scale retrieval.
+
+
+Hash Table
+    Advantages:
+        O(1) average-case lookup for messages by key (e.g., ID or timestamp).
+        Flexible and scalable for unordered data.
+
+    Disadvantages:
+        Does not maintain natural order.
+        Collisions may degrade performance to O(n) in the worst case.
+        Suitability: Ideal for fast access to messages with unique identifiers.
+
+
+Binary Search Tree (BST)
+    Advantages:
+        Maintains ordered data.
+        Efficient for range queries (O(log n) for balanced trees).
+
+    Disadvantages:
+        Performance degrades to O(n) for unbalanced trees.
+        Suitability: Useful for retrieving messages within a specific range of timestamps.
+
+B-Trees
+    Advantages:
+        Designed for systems with large datasets (e.g., databases).
+        Efficient for block-oriented storage and retrieval.
+
+    Disadvantages:
+        More complex implementation.
+        Suitability: Optimal for high-scale storage with frequent insertions and deletions.
+
+
+Task 2: Real-Time Updates:
+
+Explore data structures suitable for real-time updates,
+ensuring that new messages are promptly delivered to users.
+Investigate techniques such as polling, long-polling,
+and websockets for real-time communication.
+Analyze the pros and cons of each approach in
+terms of scalability, latency, and resource consumption.
+
+Polling
+    Advantages:
+        Easy to implement.
+
+    Disadvantages:
+        Inefficient with high latency and redundant requests.
+
+    Suitability:
+        Suitable for apps with low update frequency.
+
+Long-Polling
+    Advantages:
+        More efficient than polling; reduces unnecessary traffic.
+
+    Disadvantages:
+        Higher server resource usage during idle periods.
+
+    Suitability:
+        Intermediate solution for real-time updates.
+
+WebSockets
+    Advantages:
+        Full-duplex, persistent communication between client and server.
+        Low latency; efficient for high-frequency updates.
+
+    Disadvantages:
+        Complex implementation and initial setup.
+
+    Suitability:
+        Ideal for real-time messaging apps.
+
+
+Task 3: Conversation List Management:
+
+Evaluate data structures for managing the list of
+conversations, optimizing the display and retrieval of active conversations.
+Consider data structures like arrays, linked lists, hash tables,
+and trees for storing and accessing conversation metadata.
+Discuss strategies for sorting, filtering, and indexing conversations
+to improve user experience.
+
+
+Array
+    Advantages:
+        Fast sequential iteration.
+
+    Disadvantages:
+        Expensive insertion and deletion.
+
+    Suitability:
+        Suitable for small lists with infrequent updates.
+
+Hash Table
+    Advantages:
+        O(1) access by unique keys (e.g., conversation IDs).
+
+    Disadvantages:
+        No inherent order.
+
+    Suitability:
+        Efficient for accessing metadata.
+
+Tree (e.g., AVL Tree, Red-Black Tree)
+    Advantages:
+        Maintains sorted order for conversations (e.g., by last activity).
+
+    Disadvantages:
+        Higher memory overhead and implementation complexity.
+
+    Suitability:
+        Optimal for displaying and sorting conversations dynamically.
+
+Linked List
+    Advantages:
+        Dynamic size allows for efficient insertion and deletion (O(1) if position is known).
+        Simple to implement for ordered or sequential lists.
+        
+    Disadvantages:
+        Sequential traversal required (O(n) for access).
+        Higher memory usage due to pointers.
+
+    Suitability:
+        Useful for dynamic conversation lists with frequent additions and removals.
